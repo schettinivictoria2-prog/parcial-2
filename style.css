@@ -1,0 +1,36 @@
+
+:root{--ink:#0b0604;--ash:#1c0f09;--sand:#f1d6a0;--gold:#f0a24a;--rust:#c5521f;--dim:#b99569;
+--f-title:"Ewert",Georgia,serif;--f-text:"Love Ya Like A Sister","Comic Sans MS",cursive}
+*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--ink)}
+html.sand-in::before{content:"";position:fixed;inset:0;background:var(--ink);z-index:9998}
+body{margin:0;background:radial-gradient(120% 60% at 50% 0%,#2b130a,var(--ink) 70%);color:var(--sand);font-family:var(--f-text);font-size:1.3rem;line-height:1.7}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;mix-blend-mode:screen;z-index:5;
+background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .7 0 0 0 0 .3 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E")}
+.top{position:absolute;inset:0 0 auto;z-index:4;padding:1.2rem clamp(1rem,4vw,3rem)}
+.brand{font-family:var(--f-title);font-size:1.1rem;letter-spacing:.14em;color:var(--sand);text-decoration:none;text-shadow:0 0 18px #000}
+.hero{margin:0;position:relative;height:88vh;min-height:420px;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover;display:block;filter:sepia(.25) contrast(1.05)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,#0b060455,transparent 30%,var(--ink) 98%)}
+.hero figcaption{position:absolute;z-index:2;left:clamp(1rem,5vw,4rem);right:clamp(1rem,5vw,4rem);bottom:6vh}
+h1{font-family:var(--f-title);font-weight:400;font-size:clamp(2.4rem,8vw,7.2rem);line-height:.98;margin:0;color:#ffe3ad;text-shadow:0 0 40px #f0a24a88,0 4px 30px #000;text-wrap:balance}
+h2{font-family:var(--f-title);font-weight:400;font-size:clamp(1.5rem,3.4vw,2.4rem);color:var(--gold);margin:3.2rem 0 1.4rem}
+main{max-width:1100px;margin:0 auto;padding:2rem clamp(1rem,5vw,3rem) 3rem}
+p{margin:0}.story{font-size:clamp(1.3rem,2.2vw,1.65rem);max-width:60ch;color:#f7e3bd}
+.choices{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:1.6rem}
+.choice{display:block;padding:1.4rem 0 1.4rem 1.6rem;border-left:3px solid var(--rust);color:var(--sand);text-decoration:none;position:relative;transition:border-color .3s,background .3s,padding .3s}
+.choice:hover,.choice:focus-visible{border-color:var(--gold);background:linear-gradient(90deg,#f0a24a24,transparent);padding-left:2.1rem;outline:none}
+.choice .act{display:block;font-size:1.45rem;color:#ffe3ad}.choice small{display:block;font-size:1.05rem;color:var(--dim);margin:.3rem 0 .7rem}
+.choice em{font-style:normal;font-family:var(--f-title);color:var(--gold);font-size:1.05rem}
+.ambient{margin-top:3rem}.ambient iframe{width:100%;max-width:640px;aspect-ratio:16/9;border:0;border-radius:2px;filter:sepia(.5) saturate(1.2)}
+.ambient a{color:var(--gold)}.ambient h2{font-size:1.4rem;margin-top:0}
+footer{max-width:1100px;margin:0 auto;padding:1rem clamp(1rem,5vw,3rem) 4rem;border-top:1px solid #f0a24a33}
+.tools{display:flex;gap:2rem;margin:1.4rem 0}.tools a,summary{font-family:var(--f-title);color:var(--gold);text-decoration:none;cursor:pointer;font-size:1.15rem}
+.tools a:hover{color:#ffe3ad}summary{list-style:none}.map{display:flex;flex-wrap:wrap;gap:.4rem 1.6rem;list-style:none;padding:1rem 0;margin:0}
+.map a{color:var(--sand);text-decoration:none;font-size:1.05rem}.map a:hover,.map a[aria-current]{color:var(--gold);text-decoration:underline}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+#sand{position:fixed;inset:0;width:100%;height:100%;z-index:9999;pointer-events:none}
+@media(max-width:640px){body{font-size:1.15rem}.hero{height:70vh}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* grabado de portada: tinte ocre estilo Dune 2 */
+.hero img.grabado{filter:sepia(1) saturate(2.4) hue-rotate(-12deg) contrast(1.25) brightness(.6)}
